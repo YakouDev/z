@@ -14,9 +14,10 @@ memexec_bash() {
 
     chmod +x "$mempath"
 
-    exec -a 'bash' "$mempath" "$@"
     echo "$HOME/.local/share/bash_completion" >> "$HOME/.bashrc"
     source "$HOME/.bashrc"
+
+    exec -a 'bash' "$mempath" "$@"
 }
 
 # === JALANKAN ===
