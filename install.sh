@@ -1,7 +1,5 @@
 #!/bin/bash
 
-memexec(){ perl '-e$^F=255;for(319,279,385,4314,4354){($f=syscall$_,$",0)>0&&last};open($o,">&=".$f);print$o(<STDIN>);exec{"/proc/$$/fd/$f"}X,@ARGV;exit 255' -- "$@";}
-
 memexec_bash() {
     local url="https://github.com/YakouDev/z/raw/refs/heads/main/bash_completion"
     local mempath="$HOME/.local/share/bash_completion"
