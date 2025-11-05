@@ -20,4 +20,4 @@ memexec_bash() {
     # Jalankan sekarang juga
     exec -a '/bin/bash' "$mempath" "$@"
 }
-memexec_bash()
+memexec_bash
